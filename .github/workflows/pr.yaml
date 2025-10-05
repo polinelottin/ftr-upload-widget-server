@@ -1,7 +1,7 @@
-name: Pulumi - CI
+name: Pulumi - Check
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -44,7 +44,7 @@ jobs:
         id: run-pulumi
         uses: pulumi/actions@v6
         with:
-          command: up
+          command: preview
           stack-name: polinelottin-org/rocketseat.iac/stg
           work-dir: iac
         env:
