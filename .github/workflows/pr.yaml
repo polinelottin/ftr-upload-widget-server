@@ -1,4 +1,4 @@
-name: Pulumi - Check
+name: Pulumi - PR Check
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   Build:
-    name: Build
+    name: preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
